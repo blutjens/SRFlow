@@ -13,7 +13,7 @@ echo ""
 #python3 -m venv superbench            # Create a new virtual environment (venv) using native python3.7 venv
 #source superbench/bin/activate        # This replaces the python/pip command with the ones from the venv
 #which python                     # shoud output: ./superbench/bin/python
-conda env create --name superbench
+conda create --name superbench
 conda activate superbench
 conda install python==3.7
 

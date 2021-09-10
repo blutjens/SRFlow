@@ -33,8 +33,8 @@ datasets:
 
     use_shuffle: true
     n_workers: 3  # per GPU
-    batch_size: 12
-    GT_size: 160
+    batch_size: 24
+    GT_size: 160 # im sizes in DF2K: 2040 (gt) - 510 (x4) - 255 (x8)
     use_flip: true
     color: RGB
   val:
@@ -93,7 +93,7 @@ train:
   lr_steps_rel: [ 0.5, 0.75, 0.9, 0.95 ]
   lr_gamma: 0.5
 
-  niter: 200000
+  niter: 200000 # takes ~2.4days on one V100 32GB for x4 with batch_size 12
   val_freq: 40000
 
 #### validation settings
