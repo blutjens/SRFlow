@@ -10,9 +10,12 @@ echo "Setup Virtual Environment"
 echo "########################################"
 echo ""
 
-python3 -m venv myenv            # Create a new virtual environment (venv) using native python3.7 venv
-source myenv/bin/activate        # This replaces the python/pip command with the ones from the venv
-which python                     # shoud output: ./myenv/bin/python
+#python3 -m venv superbench            # Create a new virtual environment (venv) using native python3.7 venv
+#source superbench/bin/activate        # This replaces the python/pip command with the ones from the venv
+#which python                     # shoud output: ./superbench/bin/python
+conda env create --name superbench
+conda activate superbench
+conda install python==3.7
 
 pip install --upgrade pip        # Update pip
 pip install -r requirements.txt  # Install the exact same packages that we used
